@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl7eyk012o1hp"]
+
+[ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_8rogi"]
+[ext_resource type="Texture2D" uid="uid://b8qo5sm247axm" path="res://Art/Bitlytic/B0-Z0.png" id="2_5ht7k"]
+[ext_resource type="Script" path="res://Scenes/player_movement.gd" id="3_cjxe3"]
+[ext_resource type="Script" path="res://Player/Scripts/player_weapon.gd" id="4_rntaj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ix7w"]
+radius = 4.0
+height = 14.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 128
+script = ExtResource("1_8rogi")
+
+[node name="FloorCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_2ix7w")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -12)
+texture = ExtResource("2_5ht7k")
+hframes = 8
+vframes = 3
+
+[node name="PlayerMovement" type="Node" parent="."]
+script = ExtResource("3_cjxe3")
+
+[node name="PlayerWeapon" type="Node2D" parent="." node_paths=PackedStringArray("firing_position")]
+script = ExtResource("4_rntaj")
+firing_position = NodePath("../FiringPosition")
+
+[node name="FiringPosition" type="Marker2D" parent="."]
+position = Vector2(2, -4)

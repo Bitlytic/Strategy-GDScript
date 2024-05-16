@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvnhfujng2ybw"]
+
+[ext_resource type="Script" path="res://Objects/Scripts/bullet.gd" id="1_7775e"]
+[ext_resource type="Texture2D" uid="uid://cr8v60ue1jsl7" path="res://Art/Bitlytic/bullet.png" id="1_gclts"]
+[ext_resource type="Script" path="res://Util/Components/hurtbox.gd" id="3_2ig4x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0cebq"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jng58"]
+radius = 7.0
+
+[node name="Bullet" type="CharacterBody2D" node_paths=PackedStringArray("hurtbox")]
+collision_layer = 0
+collision_mask = 128
+script = ExtResource("1_7775e")
+hurtbox = NodePath("BulletHurtbox")
+max_pierce = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_gclts")
+
+[node name="Floor Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0cebq")
+
+[node name="BulletHurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("3_2ig4x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletHurtbox"]
+shape = SubResource("CircleShape2D_jng58")

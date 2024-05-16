@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://duul6fe7ylcjr"]
+
+[ext_resource type="Texture2D" uid="uid://30ltamteuvkx" path="res://Art/Kenney/carrot.png" id="1_1h1r5"]
+[ext_resource type="Script" path="res://Objects/Scripts/upgrade.gd" id="1_wj2mu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x2vwr"]
+
+[node name="Upgrade" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_wj2mu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_x2vwr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1h1r5")
