@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DamageBulletStrategy" load_steps=3 format=3 uid="uid://dedt6x6r4b7h7"]
+
+[ext_resource type="Script" path="res://Util/Strategy/damage_bullet_strategy.gd" id="1_mfwyj"]
+[ext_resource type="Texture2D" uid="uid://53h01ho1lvwp" path="res://Art/Kenney/fish.png" id="2_dwrdy"]
+
+[resource]
+script = ExtResource("1_mfwyj")
+texture = ExtResource("2_dwrdy")

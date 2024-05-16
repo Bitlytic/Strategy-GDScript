@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="ParticleBulletStrategy" load_steps=3 format=3 uid="uid://c8wytt0t0q6px"]
+
+[ext_resource type="Script" path="res://Util/Strategy/particle_bullet_strategy.gd" id="1_eilrh"]
+[ext_resource type="Texture2D" uid="uid://dnp54j8h1op73" path="res://Art/Bitlytic/crosshair.png" id="2_yauww"]
+
+[resource]
+script = ExtResource("1_eilrh")
+texture = ExtResource("2_yauww")

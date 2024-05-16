@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PierceBulletStrategy" load_steps=3 format=3 uid="uid://cf72l28pf7mom"]
+
+[ext_resource type="Script" path="res://Util/Strategy/pierce_bullet_strategy.gd" id="1_na2cs"]
+[ext_resource type="Texture2D" uid="uid://c26ro5ifb4gg4" path="res://Art/Kenney/potion.png" id="2_v0w2v"]
+
+[resource]
+script = ExtResource("1_na2cs")
+texture = ExtResource("2_v0w2v")

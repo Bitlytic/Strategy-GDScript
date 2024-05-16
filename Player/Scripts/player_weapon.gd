@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@onready var player : Player = get_owner()
 @export var firing_position : Marker2D
 
 var bullet_scene : PackedScene = preload("res://Objects/Scenes/bullet.tscn")
@@ -17,4 +17,7 @@ func _physics_process(delta: float) -> void:
 		get_tree().root.add_child(spawned_bullet)
 		spawned_bullet.global_position = firing_position.global_position
 		spawned_bullet.rotation = mouse_direction.angle()
+		
+		for strategy in player.upgrades:
+			strategy.apply_upgrade(spawned_bullet)
 		

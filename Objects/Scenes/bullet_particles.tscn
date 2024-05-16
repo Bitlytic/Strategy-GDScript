@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://drl8260u6fogv"]
+
+[ext_resource type="Script" path="res://Objects/Scripts/bullet_particles.gd" id="1_0u1m1"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_p1lar"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 25.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+
+[node name="BulletParticles" type="GPUParticles2D"]
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_p1lar")
+script = ExtResource("1_0u1m1")

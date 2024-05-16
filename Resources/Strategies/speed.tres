@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SpeedBulletStrategy" load_steps=3 format=3 uid="uid://bfwoyu25j5me"]
+
+[ext_resource type="Script" path="res://Util/Strategy/speed_bullet_strategy.gd" id="1_3cqj8"]
+[ext_resource type="Texture2D" uid="uid://30ltamteuvkx" path="res://Art/Kenney/carrot.png" id="2_aas4s"]
+
+[resource]
+script = ExtResource("1_3cqj8")
+texture = ExtResource("2_aas4s")
