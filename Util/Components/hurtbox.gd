@@ -12,7 +12,6 @@ func _ready() -> void:
 
 
 func on_area_entered(area: Area2D):
-	
 	if area is Hitbox:
 		var attack := Attack.new()
 		

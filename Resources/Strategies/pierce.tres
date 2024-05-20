@@ -6,3 +6,4 @@
 [resource]
 script = ExtResource("1_na2cs")
 texture = ExtResource("2_v0w2v")
+upgrade_text = "Pierce"

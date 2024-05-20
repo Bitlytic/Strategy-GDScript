@@ -1,16 +1,44 @@
-[gd_scene load_steps=4 format=3 uid="uid://duul6fe7ylcjr"]
+[gd_scene load_steps=7 format=3 uid="uid://duul6fe7ylcjr"]
 
 [ext_resource type="Texture2D" uid="uid://30ltamteuvkx" path="res://Art/Kenney/carrot.png" id="1_1h1r5"]
 [ext_resource type="Script" path="res://Objects/Scripts/upgrade.gd" id="1_wj2mu"]
+[ext_resource type="Script" path="res://Util/Strategy/base_bullet_strategy.gd" id="2_h3bhn"]
+[ext_resource type="Script" path="res://Objects/Scripts/Enemy/health_label.gd" id="4_5ayge"]
+
+[sub_resource type="Resource" id="Resource_eyw8t"]
+script = ExtResource("2_h3bhn")
+texture = ExtResource("1_1h1r5")
+upgrade_text = "Speed"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x2vwr"]
 
-[node name="Upgrade" type="Area2D"]
+[node name="Upgrade" type="Area2D" node_paths=PackedStringArray("upgrade_label", "sprite")]
 collision_layer = 0
 script = ExtResource("1_wj2mu")
+upgrade_label = NodePath("UpgradeLabel")
+sprite = NodePath("Sprite2D")
+bullet_strategy = SubResource("Resource_eyw8t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_x2vwr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_1h1r5")
+
+[node name="UpgradeLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 59.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_font_sizes/font_size = 16
+text = "Speed"
+horizontal_alignment = 1
+script = ExtResource("4_5ayge")

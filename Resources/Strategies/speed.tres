@@ -5,4 +5,6 @@
 
 [resource]
 script = ExtResource("1_3cqj8")
+speed_increase = 150.0
 texture = ExtResource("2_aas4s")
+upgrade_text = "Speed"

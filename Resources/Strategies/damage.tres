@@ -6,3 +6,4 @@
 [resource]
 script = ExtResource("1_mfwyj")
 texture = ExtResource("2_dwrdy")
+upgrade_text = "Damage"

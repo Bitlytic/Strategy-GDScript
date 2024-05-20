@@ -1,8 +1,10 @@
 extends Camera2D
 
-
-@export var target : Node2D
+@export var target : Player
+@export var sensitivity := 0.1
 
 
 func _physics_process(delta: float) -> void:
-	global_position = global_position.lerp(target.global_position, 0.25)
+	var target_position = target.aim_position * sensitivity
+	
+	position = position.lerp(target_position, 0.25)

@@ -1,6 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://drl8260u6fogv"]
+[gd_scene load_steps=5 format=3 uid="uid://drl8260u6fogv"]
 
 [ext_resource type="Script" path="res://Objects/Scripts/bullet_particles.gd" id="1_0u1m1"]
+
+[sub_resource type="Gradient" id="Gradient_jr0ln"]
+offsets = PackedFloat32Array(0, 0.828729, 0.872928)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.848101, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_gftm8"]
+gradient = SubResource("Gradient_jr0ln")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_p1lar"]
 particle_flag_disable_z = true
@@ -8,8 +15,9 @@ spread = 180.0
 initial_velocity_min = 25.0
 initial_velocity_max = 50.0
 gravity = Vector3(0, 0, 0)
+color_ramp = SubResource("GradientTexture1D_gftm8")
 
 [node name="BulletParticles" type="GPUParticles2D"]
-amount = 64
+amount = 32
 process_material = SubResource("ParticleProcessMaterial_p1lar")
 script = ExtResource("1_0u1m1")

@@ -15,7 +15,6 @@ collision_layer = 0
 collision_mask = 128
 script = ExtResource("1_7775e")
 hurtbox = NodePath("BulletHurtbox")
-max_pierce = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708

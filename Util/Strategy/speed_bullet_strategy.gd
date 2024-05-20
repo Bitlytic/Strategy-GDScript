@@ -2,5 +2,8 @@ class_name SpeedBulletStrategy
 extends BaseBulletStrategy
 
 
+@export var speed_increase := 50.0
+
+
 func apply_upgrade(bullet: Bullet):
-	bullet.speed += 50.0
+	bullet.speed += speed_increase
