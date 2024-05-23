@@ -29,7 +29,7 @@ signal damaged(attack: Attack)
 @onready var sprite : Sprite2D = $Sprite2D
 
 var alive := true
-var stunned : bool = false
+var stunned := false
 
 
 func _ready():

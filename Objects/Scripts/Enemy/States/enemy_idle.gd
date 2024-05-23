@@ -1,8 +1,6 @@
 extends EnemyState
 
 
-@export var detection_range := 200.0
-
 var idle_timer : Timer
 
 

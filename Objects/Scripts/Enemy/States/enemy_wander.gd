@@ -1,12 +1,9 @@
 extends EnemyState
 
 
-@export var minimum_wander := 150.0
-@export var maximum_wander := 300.0
-@export var wander_speed := 50.0
-
 @export var min_wander_time := 2.5
 @export var max_wander_time := 10.0
+@export var wander_speed := 50.0
 
 var wander_direction : Vector2
 

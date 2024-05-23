@@ -1,124 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://dl7eyk012o1hp"]
+[gd_scene load_steps=15 format=3 uid="uid://dl7eyk012o1hp"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_8rogi"]
 [ext_resource type="Texture2D" uid="uid://b8qo5sm247axm" path="res://Art/Bitlytic/B0-Z0.png" id="2_5ht7k"]
-[ext_resource type="Script" path="res://Scenes/player_movement.gd" id="3_cjxe3"]
+[ext_resource type="Script" path="res://Player/Scripts/player_movement.gd" id="3_cjxe3"]
 [ext_resource type="Script" path="res://Player/Scripts/player_animation.gd" id="4_of2ax"]
 [ext_resource type="Script" path="res://Player/Scripts/player_weapon.gd" id="4_rntaj"]
-[ext_resource type="Script" path="res://Objects/Scripts/player_camera.gd" id="5_dq44d"]
+[ext_resource type="Script" path="res://Player/Scripts/player_camera.gd" id="5_dq44d"]
+[ext_resource type="AnimationLibrary" uid="uid://c8n45di3aj1ys" path="res://Player/Animations/player.res" id="7_qwi34"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2ix7w"]
 radius = 4.0
 height = 14.0
-
-[sub_resource type="Animation" id="Animation_5yh3q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [16]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("PlayerSprite:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_fh717"]
-resource_name = "idle"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_1uhdu"]
-resource_name = "run_left"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [16, 17, 18, 19, 20, 21, 22, 23]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("PlayerSprite:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_tcl75"]
-resource_name = "run_right"
-length = 0.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PlayerSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [16, 17, 18, 19, 20, 21, 22, 23]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("PlayerSprite:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ffsxo"]
-_data = {
-"RESET": SubResource("Animation_5yh3q"),
-"idle": SubResource("Animation_fh717"),
-"run_left": SubResource("Animation_1uhdu"),
-"run_right": SubResource("Animation_tcl75")
-}
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_p4448"]
 
@@ -186,13 +78,13 @@ target = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_ffsxo")
+"": ExtResource("7_qwi34")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 active = false
 libraries = {
-"": SubResource("AnimationLibrary_ffsxo")
+"": ExtResource("7_qwi34")
 }
 tree_root = SubResource("AnimationNodeBlendTree_6djsc")
 anim_player = NodePath("../AnimationPlayer")

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c5cbe07dk5lyn" path="res://Art/Arks/DinoSprites - mort.png" id="3_yk0c8"]
 [ext_resource type="Texture2D" uid="uid://cqcr6ctruxfn5" path="res://Art/Arks/DinoSprites - tard.png" id="4_s8wpe"]
 [ext_resource type="Texture2D" uid="uid://eb28cx5toii3" path="res://Art/Arks/DinoSprites - vita.png" id="5_8jp15"]
-[ext_resource type="Script" path="res://Objects/Scripts/hitbox.gd" id="6_n3oq5"]
+[ext_resource type="Script" path="res://Util/Components/hitbox.gd" id="6_4fu81"]
 [ext_resource type="Script" path="res://Objects/Scripts/Enemy/enemy_animation.gd" id="7_136f6"]
 [ext_resource type="Script" path="res://Util/Components/health.gd" id="8_ns7hb"]
 [ext_resource type="Script" path="res://Objects/Scripts/Enemy/enemy_state_machine.gd" id="9_23on8"]
@@ -344,7 +344,7 @@ textures = Array[Texture2D]([ExtResource("2_n1oc7"), ExtResource("3_yk0c8"), Ext
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("6_n3oq5")
+script = ExtResource("6_4fu81")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_7ufao")
@@ -394,7 +394,7 @@ animation_player = NodePath("../AnimationPlayer")
 
 [node name="EnemyStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("9_23on8")
-initial_state = NodePath("Wander")
+initial_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("10_d3r8p")

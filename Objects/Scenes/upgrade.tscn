@@ -18,6 +18,7 @@ script = ExtResource("1_wj2mu")
 upgrade_label = NodePath("UpgradeLabel")
 sprite = NodePath("Sprite2D")
 bullet_strategy = SubResource("Resource_eyw8t")
+needs_update = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_x2vwr")

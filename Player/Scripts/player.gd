@@ -8,7 +8,7 @@ extends CharacterBody2D
 ############################################
 var upgrades : Array[BaseBulletStrategy] = []
 
-var aim_position : Vector2
+var aim_position : Vector2 = Vector2(1, 0)
 
 
 func _unhandled_input(event: InputEvent) -> void:
