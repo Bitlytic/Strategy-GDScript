@@ -3,7 +3,7 @@
 ## GDScript Version
 There is a GDScript and C# version available.
 
-This is the GDScript version, you can find the C# version [here]().
+This is the GDScript version, you can find the C# version [here](https://github.com/Bitlytic/Strategy-Mono).
 
 ### Template Project
 This is a top down arena shooter that uses Composition and the Strategy Pattern. It is designed in such a way that you can clone this github repo and use it as a template with a few things ready to go. The assets in this project have also been chosen so that you can use them for quick prototyping and if you decide to go commercial, there is no licensing other than giving credit due.
