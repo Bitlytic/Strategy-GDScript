@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1mibcolpj6l1"]
+[gd_scene load_steps=11 format=3 uid="uid://c1mibcolpj6l1"]
 
 [ext_resource type="PackedScene" uid="uid://dl7eyk012o1hp" path="res://Player/player.tscn" id="1_g1d0g"]
 [ext_resource type="Texture2D" uid="uid://cyr2m6q5pv84" path="res://Art/RGS_Dev/tileset_brown.png" id="2_r40t1"]
@@ -394,19 +394,21 @@ position = Vector2(237, 300)
 [node name="Upgrades" type="Node" parent="."]
 
 [node name="Upgrade" parent="Upgrades" instance=ExtResource("5_7nh6k")]
-position = Vector2(-50, -45)
+position = Vector2(-50, 44)
 bullet_strategy = ExtResource("6_tlnjk")
+needs_update = false
 
 [node name="Upgrade2" parent="Upgrades" instance=ExtResource("5_7nh6k")]
-position = Vector2(0, -45)
+position = Vector2(0, 44)
 bullet_strategy = ExtResource("7_i5k8s")
+needs_update = false
 
 [node name="Upgrade3" parent="Upgrades" instance=ExtResource("5_7nh6k")]
-position = Vector2(50, -45)
+position = Vector2(50, 44)
 bullet_strategy = ExtResource("8_t5n6q")
 needs_update = false
 
 [node name="Upgrade4" parent="Upgrades" instance=ExtResource("5_7nh6k")]
-position = Vector2(-56, -26)
+position = Vector2(-48, -26)
 bullet_strategy = ExtResource("7_44jfx")
 needs_update = false
