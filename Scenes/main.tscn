@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ckfohqhp1io7i" path="res://Objects/Scenes/enemy.tscn" id="4_7vowh"]
 [ext_resource type="PackedScene" uid="uid://duul6fe7ylcjr" path="res://Objects/Scenes/upgrade.tscn" id="5_7nh6k"]
 [ext_resource type="Resource" uid="uid://bfwoyu25j5me" path="res://Resources/Strategies/speed.tres" id="6_tlnjk"]
+[ext_resource type="Resource" uid="uid://biohhit4wb04x" path="res://Resources/Strategies/particles.tres" id="7_44jfx"]
 [ext_resource type="Resource" uid="uid://dedt6x6r4b7h7" path="res://Resources/Strategies/damage.tres" id="7_i5k8s"]
 [ext_resource type="Resource" uid="uid://cf72l28pf7mom" path="res://Resources/Strategies/pierce.tres" id="8_t5n6q"]
 
@@ -403,3 +404,9 @@ bullet_strategy = ExtResource("7_i5k8s")
 [node name="Upgrade3" parent="Upgrades" instance=ExtResource("5_7nh6k")]
 position = Vector2(50, -45)
 bullet_strategy = ExtResource("8_t5n6q")
+needs_update = false
+
+[node name="Upgrade4" parent="Upgrades" instance=ExtResource("5_7nh6k")]
+position = Vector2(-56, -26)
+bullet_strategy = ExtResource("7_44jfx")
+needs_update = false

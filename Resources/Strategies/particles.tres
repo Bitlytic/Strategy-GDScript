@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ParticleBulletStrategy" load_steps=3 format=3 uid="uid://biohhit4wb04x"]
+
+[ext_resource type="Script" path="res://Util/Strategy/particle_bullet_strategy.gd" id="1_quq4p"]
+[ext_resource type="Texture2D" uid="uid://0aylbueaelkc" path="res://Art/Kenney/firework.png" id="2_jjlqd"]
+
+[resource]
+script = ExtResource("1_quq4p")
+texture = ExtResource("2_jjlqd")
+upgrade_text = "Particles"
