@@ -394,7 +394,7 @@ animation_player = NodePath("../AnimationPlayer")
 
 [node name="EnemyStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("9_23on8")
-initial_state = NodePath("Idle")
+initial_state = NodePath("Wander")
 
 [node name="Idle" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("10_d3r8p")
