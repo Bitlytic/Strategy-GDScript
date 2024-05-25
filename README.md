@@ -13,14 +13,14 @@ This is a top down arena shooter that uses Composition and the Strategy Pattern.
 This project is full of comments, the C# version has nearly the same comments. If you are interested in learning C# and you know GDScript or vice-versa, doing a search for the text inside of comments is a great way to see how something in one language is done in the other.
 
 ### Strategy Pattern
-This is a project that uses the Strategy Pattern for my tutorial on [YouTube](www.youtube.com/bitlytic) made in Godot 4.2
+This is a project that uses the Strategy Pattern for my tutorial on [YouTube](https://www.youtube.com/watch?v=sZDJJeDNe_M) made in Godot 4.2
 
 
 ### Using this Project
 
 Using this project should be as simple as cloning it via git or downloading as a zip file. From there, you can point Godot to the project.godot file, and it _should_ just run.
 
-I do not require credit, you can use this as a template or a learning resource or any way you want to. If you do, you're welcome to share it and tag me on Twitter [@Bitlytic](www.twitter.com/bitlytic), I would love to see what you make!
+I do not require credit, you can use this as a template or a learning resource or any way you want to. If you do, you're welcome to share it and tag me on Twitter [@Bitlytic](https://www.twitter.com/bitlytic), I would love to see what you make!
 
 
 ## Assets
